@@ -583,7 +583,7 @@ public abstract class TokenCompleteTextView extends MultiAutoCompleteTextView im
         }
     }
 
-    private SpannableStringBuilder buildSpannableForText(CharSequence text) {
+    public SpannableStringBuilder buildSpannableForText(CharSequence text) {
         //Add a sentinel , at the beginning so the user can remove an inner token and keep auto-completing
         //This is a hack to work around the fact that the tokenizer cannot directly detect spans
         return new SpannableStringBuilder("," + tokenizer.terminateToken(text));
